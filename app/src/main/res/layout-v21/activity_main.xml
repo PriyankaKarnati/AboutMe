@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name = "myName"
+            type = "com.example.aboutme.MyName"
+        />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FA614348"
+        android:backgroundTint="@color/back_colour"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/layout_margin"
+        android:paddingEnd="@dimen/layout_margin">
+
+
+        <TextView
+            android:id="@+id/name_id"
+            style="@style/PersonalNameStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/back_colour"
+            android:fontFamily="@font/felipa"
+            android:lineSpacingMultiplier="1.2"
+            android:text="@={myName.name}"
+            android:textAlignment="center"
+            android:textColor="#320E38"
+            android:textSize="30sp" />
+
+
+        <ScrollView
+            android:id="@+id/bio_scroll_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FAF5DBDB">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F5E9CFCF"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/nick_edit_id"
+                    style="@style/PersonalNameStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="cursive"
+                    android:hint="@string/nickname"
+                    android:inputType="textShortMessage|textPersonName|text"
+                    android:textColor="#F0F7674E" />
+
+                <Button
+                    android:id="@+id/done_but_id"
+                    android:layout_width="64dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="7sp"
+                    android:alpha="@dimen/transp"
+                    android:background="#FAEE6476"
+                    android:fontFamily="@font/caveat_brush"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="done_button_click"
+                    android:text="@string/done_but"
+                    android:textAlignment="center"
+                    android:textColor="#DF473030" />
+
+                <TextView
+                    android:id="@+id/nick_text_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EEFDCAC5"
+                    android:fontFamily="@font/aref_ruqaa"
+                    android:paddingBottom="@dimen/small_padding"
+                    android:text="@={myName.nickname}"
+                    android:textAlignment="center"
+                    android:textColor="#F7D84E8F"
+                    android:textColorHighlight="#02FFFFFF"
+                    android:textColorHint="#00FFFFFF"
+                    android:textColorLink="#00FFFFFF"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/star_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:contentDescription="@string/yellow_star"
+                    app:srcCompat="@android:drawable/star_big_on" />
+
+                <TextView
+                    android:id="@+id/bio_text"
+                    style="@style/PersonalNameStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/allura"
+                    android:text="@string/bio"
+                    android:textColor="#5C3E4A" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

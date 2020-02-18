@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/abeezee</item>
+        <item>@font/allura</item>
+        <item>@font/almendra_bold_italic</item>
+        <item>@font/aref_ruqaa</item>
+        <item>@font/bad_script</item>
+        <item>@font/caveat_brush</item>
+        <item>@font/courgette</item>
+        <item>@font/felipa</item>
+    </array>
+</resources>

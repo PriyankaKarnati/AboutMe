@@ -33,7 +33,6 @@ class MainActivity : AppCompatActivity() {
         binding.apply {
             myName?.nickname = nick_edit_id.text.toString()
             invalidateAll()
-            //binding.nickTextId.text = binding.nickEditId.text
             binding.nickEditId.visibility = View.GONE
             binding.nickTextId.visibility = View.VISIBLE
         }
